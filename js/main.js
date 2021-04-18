@@ -3,7 +3,9 @@ const problemElement2 = $(".problem2");
 const problemElement3 = $(".problem3");
 const problemElement4 = $(".problem4");
 const problemElement5 = $(".problem5");
-const resetButton = document.querySelector(".reset-button")
+const resetButton = document.querySelector(".reset-button");
+const ourForm = document.querySelector(".our-form");
+const ourField = document.querySelector(".our-field");
 
 let state = {
     state:0,
@@ -51,7 +53,8 @@ function updateProblem(){
     </div>
     `);
     
-   
+    ourField.value = "";
+    ourField.focus();
 }
 updateProblem();
 
@@ -105,6 +108,25 @@ function generateAdditionProblem5(){
         operator:'+',
     }
 }
+
+$('#answer').click(function(e){
+    e.preventDefault()
+    // alert("hello");
+  let correctAnswer;
+  const p = state.currentProblem1;
+  if (p.operator == "+") correctAnswer = p.numberOne + p.numberTwo;
+  
+
+  if (parseInt(ourField.value, 10) === correctAnswer) {
+    state.score++
+    updateProblem()
+    alert("Hurray! its the right answer");
+  } else {
+    state.wrongAnswers++
+    alert("Oops! its the wrong answer, Try Again");
+  }
+});
+
 
 resetButton.addEventListener("click", resetGame);
 function resetGame() {
