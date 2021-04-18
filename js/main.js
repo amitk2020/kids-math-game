@@ -54,7 +54,7 @@ function updateProblem(){
     `);
     
     ourField.value = "";
-    ourField.focus();
+    // ourField.focus();
 }
 updateProblem();
 
