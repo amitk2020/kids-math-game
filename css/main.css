@@ -11,6 +11,19 @@ body{
    background-position: center;
    height:100vh;
 }
+.numberandoperator{
+   display: flex;
+   margin-left:-25px;
+   align-items: center;
+}
+.numberandoperator h2{
+   margin-right:5px;
+}
+.underline::after{
+   content:"-------------";
+   margin-left:-25px;
+
+}
 
 
 

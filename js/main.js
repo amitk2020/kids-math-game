@@ -16,29 +16,39 @@ function updateProblem(){
     state.currentProblem4 = generateAdditionProblem4();
     state.currentProblem5 = generateAdditionProblem5();
     problemElement1.html(`
-    <h1>${state.currentProblem1.numberOne}</h1>
+    <h1 >${state.currentProblem1.numberOne}</h1>
+    <div class="numberandoperator">
     <h2>${state.currentProblem1.operator}</h2>  
     <h1>${state.currentProblem1.numberTwo}</h1>
+    </div>
     `);
     problemElement2.html(`
     <h1>${state.currentProblem2.numberOne}</h1>
-    <h2>${state.currentProblem2.operator}</h2>  
-    <h1>${state.currentProblem2.numberTwo}</h1>
+    <div class="numberandoperator">
+        <h2>${state.currentProblem2.operator}</h2>  
+        <h1>${state.currentProblem2.numberTwo}</h1>
+    </div>
     `);
     problemElement3.html(`
     <h1>${state.currentProblem3.numberOne}</h1>
-    <h2>${state.currentProblem3.operator}</h2>  
-    <h1>${state.currentProblem3.numberTwo}</h1>
+    <div class="numberandoperator">
+        <h2>${state.currentProblem3.operator}</h2>  
+        <h1>${state.currentProblem3.numberTwo}</h1>
+    </div>
     `);
     problemElement4.html(`
     <h1>${state.currentProblem4.numberOne}</h1>
-    <h2>${state.currentProblem4.operator}</h2>  
-    <h1>${state.currentProblem4.numberTwo}</h1>
+    <div class="numberandoperator">
+        <h2>${state.currentProblem4.operator}</h2>  
+        <h1>${state.currentProblem4.numberTwo}</h1>
+    </div>
     `);
     problemElement5.html(`
     <h1>${state.currentProblem5.numberOne}</h1>
-    <h2>${state.currentProblem5.operator}</h2>  
-    <h1>${state.currentProblem5.numberTwo}</h1>
+    <div class="numberandoperator">
+        <h2>${state.currentProblem5.operator}</h2>  
+        <h1>${state.currentProblem5.numberTwo}</h1>
+    </div>
     `);
     
    
