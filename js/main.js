@@ -1,140 +1,233 @@
-const problemElement1 = $(".problem1");
-const problemElement2 = $(".problem2");
-const problemElement3 = $(".problem3");
-const problemElement4 = $(".problem4");
-const problemElement5 = $(".problem5");
 const resetButton = document.querySelector(".reset-button");
 const ourForm = document.querySelector(".our-form");
-const ourField = document.querySelector(".our-field");
+const ourField0 = document.querySelector(".our-field-0");
+const ourField1 = document.querySelector(".our-field-1");
+const ourField2 = document.querySelector(".our-field-2");
+const ourField3 = document.querySelector(".our-field-3");
+const ourField4 = document.querySelector(".our-field-4");
+const ourField5 = document.querySelector(".our-field-5");
+const ourField6 = document.querySelector(".our-field-6");
+const ourField7 = document.querySelector(".our-field-7");
 
 let state = {
-    state:0,
-    wrongAnswer:0,
+    state: 0,
+    wrongAnswer: 0,
 }
-function updateProblem(){
-    state.currentProblem1 = generateAdditionProblem1();
-    state.currentProblem2 = generateAdditionProblem2();
-    state.currentProblem3 = generateAdditionProblem3();
-    state.currentProblem4 = generateAdditionProblem4();
-    state.currentProblem5 = generateAdditionProblem5();
-    problemElement1.html(`
-    <h1 >${state.currentProblem1.numberOne}</h1>
-    <div class="numberandoperator">
-    <h2>${state.currentProblem1.operator}</h2>  
-    <h1>${state.currentProblem1.numberTwo}</h1>
-    </div>
-    `);
-    problemElement2.html(`
-    <h1>${state.currentProblem2.numberOne}</h1>
-    <div class="numberandoperator">
-        <h2>${state.currentProblem2.operator}</h2>  
-        <h1>${state.currentProblem2.numberTwo}</h1>
-    </div>
-    `);
-    problemElement3.html(`
-    <h1>${state.currentProblem3.numberOne}</h1>
-    <div class="numberandoperator">
-        <h2>${state.currentProblem3.operator}</h2>  
-        <h1>${state.currentProblem3.numberTwo}</h1>
-    </div>
-    `);
-    problemElement4.html(`
-    <h1>${state.currentProblem4.numberOne}</h1>
-    <div class="numberandoperator">
-        <h2>${state.currentProblem4.operator}</h2>  
-        <h1>${state.currentProblem4.numberTwo}</h1>
-    </div>
-    `);
-    problemElement5.html(`
-    <h1>${state.currentProblem5.numberOne}</h1>
-    <div class="numberandoperator">
-        <h2>${state.currentProblem5.operator}</h2>  
-        <h1>${state.currentProblem5.numberTwo}</h1>
-    </div>
-    `);
+function updateProblem() {
+    state.currentProblem0 = generateAdditionProblem();
+    state.currentProblem1 = generateAdditionProblem();
+    state.currentProblem2 = generateAdditionProblem();
+    state.currentProblem3 = generateAdditionProblem();
+    state.currentProblem4 = generateAdditionProblem();
+    state.currentProblem5 = generateAdditionProblem();
+    state.currentProblem6 = generateAdditionProblem();
+    state.currentProblem7 = generateAdditionProblem();
+    var numberArray = [
+                        state.currentProblem0,
+                        state.currentProblem1,
+                        state.currentProblem2,
+                        state.currentProblem3,
+                        state.currentProblem4,
+                        state.currentProblem5,
+                        state.currentProblem6,
+                        state.currentProblem7,
+                    ]
     
-    ourField.value = "";
+    $('.problem').each(function(i) {
+        $(this).html(`
+                <h1 >${numberArray[i].numberOne}</h1>
+                <div class="numberandoperator">
+                <h2>${numberArray[i].operator}</h2>  
+                <h1>${numberArray[i].numberTwo}</h1>
+                
+                
+            `);
+    });
+
+
+    ourField0.value = "";
+    ourField1.value = "";
+    ourField2.value = "";
+    ourField3.value = "";
+    ourField4.value = "";
+    ourField5.value = "";
+    ourField6.value = "";
+    ourField7.value = "";
     // ourField.focus();
 }
 updateProblem();
 
-function generateNumbers1(max){
-    return Math.floor(Math.random()*(max + 1));
-}
-function generateNumbers2(max){
-    return Math.floor(Math.random()*(max + 1));
-}
-function generateNumbers3(max){
-    return Math.floor(Math.random()*(max + 1));
-}
-function generateNumbers4(max){
-    return Math.floor(Math.random()*(max + 1));
-}
-function generateNumbers5(max){
-    return Math.floor(Math.random()*(max + 1));
-}
-function generateAdditionProblem1(){
-    return {
-        numberOne: generateNumbers1(100),
-        numberTwo: generateNumbers1(100),
-        operator:'+',
+function generateNumbers(max) {
+    var number = Math.floor(Math.random() * (max + 1));
+    if (number < 10) {
+        number = '0' + number;
+    } else {
+        number = number;
     }
+    return number;
 }
-function generateAdditionProblem2(){
+
+function generateAdditionProblem() {
     return {
-        numberOne: generateNumbers2(100),
-        numberTwo: generateNumbers2(100),
-        operator:'+',
-    }
-}
-function generateAdditionProblem3(){
-    return {
-        numberOne: generateNumbers3(100),
-        numberTwo: generateNumbers3(100),
-        operator:'+',
-    }
-}
-function generateAdditionProblem4(){
-    return {
-        numberOne: generateNumbers4(100),
-        numberTwo: generateNumbers4(100),
-        operator:'+',
-    }
-}
-function generateAdditionProblem5(){
-    return {
-        numberOne: generateNumbers5(100),
-        numberTwo: generateNumbers5(100),
-        operator:'+',
+        numberOne: generateNumbers(100),
+        numberTwo: generateNumbers(100),
+        operator: '+',
     }
 }
 
-$('#answer').click(function(e){
+
+$('#answer0').click(function (e) {
     e.preventDefault()
-    // alert("hello");
-  let correctAnswer;
-  const p = state.currentProblem1;
-  if (p.operator == "+") correctAnswer = p.numberOne + p.numberTwo;
   
+    let correctAnswer;
+    const p = state.currentProblem0;
+    console.log(p);
+    if (p.operator == "+") correctAnswer = p.numberOne + p.numberTwo;
 
-  if (parseInt(ourField.value, 10) === correctAnswer) {
-    state.score++
-    updateProblem()
-    alert("Hurray! its the right answer");
-  } else {
-    state.wrongAnswers++
-    alert("Oops! its the wrong answer, Try Again");
-  }
+
+    if (parseInt(ourField0.value, 10) === correctAnswer) {
+        // state.score++
+        // updateProblem()
+        alert("Hurray! its the right answer");
+    } else {
+        // state.wrongAnswers++
+        alert("Oops! its the wrong answer, Try Again");
+    }
 });
 
+$('#answer1').click(function (e) {
+    e.preventDefault()
+    // alert("hello");
+    let correctAnswer;
+    const p = state.currentProblem1;
+    console.log(p);
+    if (p.operator == "+") correctAnswer = p.numberOne + p.numberTwo;
+    console.log(correctAnswer);
+
+    if (parseInt(ourField1.value, 10) === correctAnswer) {
+        // state.score++
+        // updateProblem()
+        alert("Hurray! its the right answer");
+    } else {
+        // state.wrongAnswers++
+        alert("Oops! its the wrong answer, Try Again");
+    }
+});
+$('#answer2').click(function (e) {
+    e.preventDefault()
+    // alert("hello");
+    let correctAnswer;
+    const p = state.currentProblem2;
+    console.log(p);
+    if (p.operator == "+") correctAnswer = p.numberOne + p.numberTwo;
+
+
+    if (parseInt(ourField2.value, 10) === correctAnswer) {
+        state.score++
+        // updateProblem()
+        alert("Hurray! its the right answer");
+    } else {
+        state.wrongAnswers++
+        alert("Oops! its the wrong answer, Try Again");
+    }
+});
+$('#answer3').click(function (e) {
+    e.preventDefault()
+    // alert("hello");
+    let correctAnswer;
+    const p = state.currentProblem3;
+    console.log(p);
+    if (p.operator == "+") correctAnswer = p.numberOne + p.numberTwo;
+
+
+    if (parseInt(ourField3.value, 10) === correctAnswer) {
+        // state.score++
+        // updateProblem()
+        alert("Hurray! its the right answer");
+    } else {
+        // state.wrongAnswers++
+        alert("Oops! its the wrong answer, Try Again");
+    }
+});
+$('#answer4').click(function (e) {
+    e.preventDefault()
+    // alert("hello");
+    let correctAnswer;
+    const p = state.currentProblem4;
+    console.log(p);
+    if (p.operator == "+") correctAnswer = p.numberOne + p.numberTwo;
+
+
+    if (parseInt(ourField4.value, 10) === correctAnswer) {
+        // state.score++
+        // updateProblem()
+        alert("Hurray! its the right answer");
+    } else {
+        // state.wrongAnswers++
+        alert("Oops! its the wrong answer, Try Again");
+    }
+});
+$('#answer5').click(function (e) {
+    e.preventDefault()
+    // alert("hello");
+    let correctAnswer;
+    const p = state.currentProblem5;
+    console.log(p);
+    if (p.operator == "+") correctAnswer = p.numberOne + p.numberTwo;
+
+
+    if (parseInt(ourField5.value, 10) === correctAnswer) {
+        // state.score++
+        // updateProblem()
+        alert("Hurray! its the right answer");
+    } else {
+        // state.wrongAnswers++
+        alert("Oops! its the wrong answer, Try Again");
+    }
+});
+$('#answer6').click(function (e) {
+    e.preventDefault()
+    // alert("hello");
+    let correctAnswer;
+    const p = state.currentProblem6;
+    console.log(p);
+    if (p.operator == "+") correctAnswer = p.numberOne + p.numberTwo;
+
+
+    if (parseInt(ourField6.value, 10) === correctAnswer) {
+        // state.score++
+        // updateProblem()
+        alert("Hurray! its the right answer");
+    } else {
+        // state.wrongAnswers++
+        alert("Oops! its the wrong answer, Try Again");
+    }
+});
+$('#answer7').click(function (e) {
+    e.preventDefault()
+    // alert("hello");
+    let correctAnswer;
+    const p = state.currentProblem7;
+    console.log(p);
+    if (p.operator == "+") correctAnswer = p.numberOne + p.numberTwo;
+
+
+    if (parseInt(ourField7.value, 10) === correctAnswer) {
+        // state.score++
+        // updateProblem()
+        alert("Hurray! its the right answer");
+    } else {
+        // state.wrongAnswers++
+        alert("Oops! its the wrong answer, Try Again");
+    }
+});
 
 resetButton.addEventListener("click", resetGame);
 function resetGame() {
     updateProblem()
     state.score = 0
     state.wrongAnswers = 0
-  }
+}
 
 
-console.log(generateAdditionProblem1());
 
