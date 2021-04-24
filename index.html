@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="">
 <!--<![endif]-->
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -18,6 +19,7 @@
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
+
 <body>
 	<!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -38,8 +40,8 @@
 						<div class=" problem problem1"></div>
 					</div>
 					<form action="" class="our-form">
-						<input type="text" class="form-control our-field our-field-0  mb-3" placeholder="Answer" aria-label="answer"
-							aria-describedby="answer">
+						<input type="text" class="form-control our-field our-field-0  mb-3" placeholder="Answer"
+							aria-label="answer" aria-describedby="answer">
 						<button class="button answer-button" type="button" id="answer0">Check Answer</button>
 					</form>
 				</div>
@@ -49,8 +51,8 @@
 					<div class="problem problem2"></div>
 				</div>
 				<form action="" class="our-form">
-					<input type="text" class="form-control our-field our-field-1  mb-3" placeholder="Answer" aria-label="answer"
-						aria-describedby="answer">
+					<input type="text" class="form-control our-field our-field-1  mb-3" placeholder="Answer"
+						aria-label="answer" aria-describedby="answer">
 					<button class="button answer-button" type="button" id="answer1">Check Answer</button>
 				</form>
 			</div>
@@ -59,8 +61,8 @@
 					<div class="problem problem3"></div>
 				</div>
 				<form action="" class="our-form">
-					<input type="text" class="form-control our-field our-field-2  mb-3" placeholder="Answer" aria-label="answer"
-						aria-describedby="answer">
+					<input type="text" class="form-control our-field our-field-2  mb-3" placeholder="Answer"
+						aria-label="answer" aria-describedby="answer">
 					<button class="button answer-button" type="button" id="answer2">Check Answer</button>
 				</form>
 			</div>
@@ -69,8 +71,8 @@
 					<div class="problem problem4"></div>
 				</div>
 				<form action="" class="our-form">
-					<input type="text" class="form-control our-field our-field-3  mb-3" placeholder="Answer" aria-label="answer"
-						aria-describedby="answer">
+					<input type="text" class="form-control our-field our-field-3  mb-3" placeholder="Answer"
+						aria-label="answer" aria-describedby="answer">
 					<button class="button answer-button" type="button" id="answer3">Check Answer</button>
 				</form>
 			</div>
@@ -79,8 +81,8 @@
 					<div class="problem problem5"></div>
 				</div>
 				<form action="" class="our-form">
-					<input type="text" class="form-control our-field our-field-4  mb-3" placeholder="Answer" aria-label="answer"
-						aria-describedby="answer">
+					<input type="text" class="form-control our-field our-field-4  mb-3" placeholder="Answer"
+						aria-label="answer" aria-describedby="answer">
 					<button class="button answer-button" type="button" id="answer4">Check Answer</button>
 				</form>
 			</div>
@@ -89,8 +91,8 @@
 					<div class="problem problem5"></div>
 				</div>
 				<form action="" class="our-form">
-					<input type="text" class="form-control our-field our-field-5  mb-3" placeholder="Answer" aria-label="answer"
-						aria-describedby="answer">
+					<input type="text" class="form-control our-field our-field-5  mb-3" placeholder="Answer"
+						aria-label="answer" aria-describedby="answer">
 					<button class="button answer-button" type="button" id="answer5">Check Answer</button>
 				</form>
 			</div>
@@ -99,8 +101,8 @@
 					<div class="problem problem5"></div>
 				</div>
 				<form action="" class="our-form">
-					<input type="text" class="form-control our-field our-field-6  mb-3" placeholder="Answer" aria-label="answer"
-						aria-describedby="answer">
+					<input type="text" class="form-control our-field our-field-6  mb-3" placeholder="Answer"
+						aria-label="answer" aria-describedby="answer">
 					<button class="button answer-button" type="button" id="answer6">Check Answer</button>
 				</form>
 			</div>
@@ -109,8 +111,8 @@
 					<div class="problem problem5"></div>
 				</div>
 				<form action="" class="our-form">
-					<input type="text" class="form-control our-field our-field-7  mb-3" placeholder="Answer" aria-label="answer"
-						aria-describedby="answer">
+					<input type="text" class="form-control our-field our-field-7  mb-3" placeholder="Answer"
+						aria-label="answer" aria-describedby="answer">
 					<button class="button answer-button" type="button" id="answer7">Check Answer</button>
 				</form>
 			</div>
@@ -119,12 +121,71 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary d-none" id="c-button" data-bs-toggle="modal" data-bs-target="#congratsModal">
+					Launch demo modal
+				</button>
+
+				<!-- Modal -->
+				<div class="modal fade" id="congratsModal" tabindex="-1" aria-labelledby="congratsModalLabel"
+					aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered modal-lg">
+						<div class="modal-content">
+							
+							<div class="modal-body">
+								<div class="text-center">
+									<img src="img/congrats.jpeg" alt="congrats" width="500">
+								</div>
+								<p class="lead text-center text-bold">You are very clever, Its the right answer</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="button button--withoutWidth"
+									data-bs-dismiss="modal">Close</button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Congrats Modal finished -->
+
+
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary d-none" id="o-button" data-bs-toggle="modal" data-bs-target="#oopsModal">
+					Launch demo modal
+				</button>
+
+				<!-- Modal -->
+				<div class="modal fade" id="oopsModal" tabindex="-1" aria-labelledby="oopsModalLabel"
+					aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered modal-lg">
+						<div class="modal-content">
+							
+							<div class="modal-body">
+								<div class="text-center">
+									<img src="img/oops.jpeg" alt="oops" width="350">
+								</div>
+								<p class="lead text-center text-bold">Oh no, Its a Wrong answer, Try again :)</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="button button--withoutWidth"
+									data-bs-dismiss="modal">Close</button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Congrats Modal finished -->
+
 			</div>
 		</div>
 	</div>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-	<script src="js/vendor/bootstrap.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+		crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
 </body>
+
 </html>

@@ -88,12 +88,13 @@ $('#answer0').click(function (e) {
     if (parseInt(ourField0.value, 10) === correctAnswer) {
         // state.score++
         // updateProblem()
-        alert("Hurray! its the right answer");
+        $('#c-button').click();
     } else {
         // state.wrongAnswers++
-        alert("Oops! its the wrong answer, Try Again");
+        $('#o-button').click();
     }
 });
+const myModal = document.getElementById('congratsModal');
 
 $('#answer1').click(function (e) {
     e.preventDefault()
@@ -107,10 +108,11 @@ $('#answer1').click(function (e) {
     if (parseInt(ourField1.value, 10) === correctAnswer) {
         // state.score++
         // updateProblem()
-        alert("Hurray! its the right answer");
+       
+        $('#c-button').click();
     } else {
         // state.wrongAnswers++
-        alert("Oops! its the wrong answer, Try Again");
+        $('#o-button').click();
     }
 });
 $('#answer2').click(function (e) {
@@ -125,10 +127,10 @@ $('#answer2').click(function (e) {
     if (parseInt(ourField2.value, 10) === correctAnswer) {
         state.score++
         // updateProblem()
-        alert("Hurray! its the right answer");
+        $('#c-button').click();
     } else {
         state.wrongAnswers++
-        alert("Oops! its the wrong answer, Try Again");
+        $('#o-button').click();
     }
 });
 $('#answer3').click(function (e) {
@@ -143,10 +145,10 @@ $('#answer3').click(function (e) {
     if (parseInt(ourField3.value, 10) === correctAnswer) {
         // state.score++
         // updateProblem()
-        alert("Hurray! its the right answer");
+        $('#c-button').click();
     } else {
         // state.wrongAnswers++
-        alert("Oops! its the wrong answer, Try Again");
+        $('#o-button').click();
     }
 });
 $('#answer4').click(function (e) {
@@ -161,10 +163,10 @@ $('#answer4').click(function (e) {
     if (parseInt(ourField4.value, 10) === correctAnswer) {
         // state.score++
         // updateProblem()
-        alert("Hurray! its the right answer");
+        $('#c-button').click();
     } else {
         // state.wrongAnswers++
-        alert("Oops! its the wrong answer, Try Again");
+        $('#o-button').click();
     }
 });
 $('#answer5').click(function (e) {
@@ -179,10 +181,10 @@ $('#answer5').click(function (e) {
     if (parseInt(ourField5.value, 10) === correctAnswer) {
         // state.score++
         // updateProblem()
-        alert("Hurray! its the right answer");
+        $('#c-button').click();
     } else {
         // state.wrongAnswers++
-        alert("Oops! its the wrong answer, Try Again");
+        $('#o-button').click();
     }
 });
 $('#answer6').click(function (e) {
@@ -197,10 +199,10 @@ $('#answer6').click(function (e) {
     if (parseInt(ourField6.value, 10) === correctAnswer) {
         // state.score++
         // updateProblem()
-        alert("Hurray! its the right answer");
+        $('#c-button').click();
     } else {
         // state.wrongAnswers++
-        alert("Oops! its the wrong answer, Try Again");
+        $('#o-button').click();
     }
 });
 $('#answer7').click(function (e) {
@@ -215,10 +217,10 @@ $('#answer7').click(function (e) {
     if (parseInt(ourField7.value, 10) === correctAnswer) {
         // state.score++
         // updateProblem()
-        alert("Hurray! its the right answer");
+        $('#c-button').click();
     } else {
         // state.wrongAnswers++
-        alert("Oops! its the wrong answer, Try Again");
+        $('#o-button').click();
     }
 });
 
