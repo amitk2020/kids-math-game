@@ -6,12 +6,18 @@
 
 
 body{
-   /* background-image: url("../img/bg.jpg");
+   background-image: url("../img/bg.jpg");
+   /* background-image:
+   linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+   url('../img/bg.jpg'); */
    background-size: cover;
-   background-position: center; */
+   background-position: center;
    height:100vh;
-   
-
+   background:#EBF3FC;
+}
+h1{
+  font-size: 2.2rem;
+  color:#39277C;
 }
 .numberandoperator{
    display: flex;
@@ -22,7 +28,7 @@ body{
    margin-right:5px;
 }
 .underline{
-   border-bottom: 2px solid #999;
+   border-bottom: 2px solid #39277C;
    width:70%;
    margin-bottom:20px;
 }
@@ -31,7 +37,8 @@ body{
 }
 
 .button{
-   background: pink;
+   background: #F39846;
+   color:white;
    padding: 10px 30px;
    border-radius: 30px;
    border:none;
@@ -44,10 +51,7 @@ body{
 }
 
 .t-card{
-   /* background: pink;
-   padding: 40px;
-   width:70%;
-   border-radius:30px; */
+   
 }
 
 

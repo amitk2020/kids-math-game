@@ -60,11 +60,13 @@ updateProblem();
 function generateNumbers(max) {
     var number = Math.floor(Math.random() * (max + 1));
     if (number < 10) {
-        number = '0' + number;
+        number = 10 + number;
+        console.log(number);
     } else {
         number = number;
     }
     return number;
+    
 }
 
 function generateAdditionProblem() {
