@@ -35,13 +35,25 @@ function updateProblem() {
     
     $('.problem').each(function(i) {
         $(this).html(`
-                <h1 >${numberArray[i].numberOne}</h1>
-                <div class="numberandoperator">
-                <h2>${numberArray[i].operator}</h2>  
-                <h1>${numberArray[i].numberTwo}</h1>
+            <div class="problem-container">
+                <div class="numbers">
+                    <h1 class="digit-one">${numberArray[i].numberOne}</h1>
+                    <div class="numberandoperator">
+                    <h2>${numberArray[i].operator}</h2>  
+                    <h1 class="digit-two">${numberArray[i].numberTwo}</h1>
+                </div>
+                <div class="underline-2"></div>
+                <div class="d-flex flex-wrap">
+                    <button class="button numberButton ">${(numberArray[i].numberOne)+(numberArray[i].numberTwo)+3}</button>
+                    <button class="button numberButton ${'order-'+i}">${(numberArray[i].numberOne)+(numberArray[i].numberTwo)}</button>
+                    <button class="button numberButton ">${(numberArray[i].numberOne)+(numberArray[i].numberTwo)+8}</button>
+                    <button class="button numberButton">${(numberArray[i].numberOne)+(numberArray[i].numberTwo)+4}</button>
+                </div>
+            </div>        
                 
                 
             `);
+        
     });
 
 
@@ -56,6 +68,28 @@ function updateProblem() {
     // ourField.focus();
 }
 updateProblem();
+
+$('.numberButton').click(function(){
+    let buttonText = $(this).text();
+    let buttonNumber = parseInt(buttonText, 10);
+    let numberOne = $(this).closest('.problem-container').find('.digit-one').text();
+    let digit1 = parseInt(numberOne, 10);
+    let numberTwo = $(this).closest('.problem-container').find('.digit-two').text();
+    let digit2 = parseInt(numberTwo, 10);
+    // alert(buttonNumber);
+    let answer;
+
+    if ( buttonNumber == (digit1 + digit2)) {
+        $('.yes-modal').addClass('visible');
+        
+            $('.yes-modal').click(function(){
+                $(this).removeClass('visible');
+            });
+        
+    } else {
+        $('#o-button').click();
+    }
+});
 
 function generateNumbers(max) {
     var number = Math.floor(Math.random() * (max + 1));
@@ -90,7 +124,12 @@ $('#answer0').click(function (e) {
     if (parseInt(ourField0.value, 10) === correctAnswer) {
         // state.score++
         // updateProblem()
-        $('#c-button').click();
+        $('.yes-modal').addClass('visible');
+        
+            $('.yes-modal').click(function(){
+                $(this).removeClass('visible');
+            });
+        
     } else {
         // state.wrongAnswers++
         $('#o-button').click();
@@ -110,8 +149,11 @@ $('#answer1').click(function (e) {
     if (parseInt(ourField1.value, 10) === correctAnswer) {
         // state.score++
         // updateProblem()
-       
-        $('#c-button').click();
+        $('.yes-modal').addClass('visible');
+        
+        $('.yes-modal').click(function(){
+            $(this).removeClass('visible');
+        });
     } else {
         // state.wrongAnswers++
         $('#o-button').click();
