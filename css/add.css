@@ -1,0 +1,98 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+body{
+    font-family: 'Luckiest Guy', cursive;
+    background-color: #e6e6ea;
+
+}
+.header-container{
+    padding:20px;
+    overflow: hidden;
+    background-color: #fe4a49;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-container h1{
+    color:white;
+}
+.header-container ul{
+    list-style:none;
+    font-size: 20px;
+    color:white;
+    display: flex;
+}
+.header-container ul li {
+    padding: 10px 20px;
+}
+.header-container a{
+    color: white;
+    text-decoration: none;
+}
+.current a::after{
+    content:"_";
+    background:white;
+    font-size: 4px;
+    display: block;
+}
+.wrapper{
+    display: flex;
+
+    
+}
+.equation{
+    font-size: 65px;
+    background-color: white;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left:10px;
+    margin-right:10px;
+    flex-basis: 75%;
+}
+.equation h1{
+    display: inline;
+    padding:20px;
+}
+.answer-options{
+    font-size: 65px;
+    margin-right:10px;
+    flex-basis: 25%;
+}
+.answer-options h1{
+    cursor: pointer;
+    color:whitesmoke;
+    border-radius: 3px;
+    margin-top:10px;
+    text-align: center;
+    width: 100%;
+    padding:15px 0px ;
+}
+#option1{
+    background-color: #fe4a49;
+    transition: 1s;
+}
+#option1:hover{
+    color:#fe4a49;
+    background-color: white;
+}
+#option2{
+    background-color: #2ab7ca;
+    transition: 1s;
+}
+#option2:hover{
+    color:#2ab7ca;
+    background-color: white;
+}
+#option3{
+    background-color: #fed766;
+    transition: 1s;
+}
+#option3:hover{
+    color:#fed766;
+    background-color: white;
+}
